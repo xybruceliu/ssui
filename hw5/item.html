@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fluff Stuff</title>
+        <link rel="icon" type="image/png" sizes="64x64" href="assets/img/icon.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html">
+                <img src="assets/img/logo.png">
+            </a>
+            <div class="menu">
+                <nav>  
+                    <ul>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <a href="products.html">Products</a>
+                                <div class="dropdown-content">
+                                    <a href="item.html">Round Pillow</a>
+                                    <a href="">Couch Pillow</a>
+                                    <a href="">Floor Poof Pillow</a>
+                                    <a href="">Bed Pillow</a>
+                                    </div>
+                                </div>
+                        </li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a id="cart" href="">Cart(<span id="cart_quantity">0</span>)</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- adapted from https://designmodo.com/create-product-page/ -->
+        <main class="container">
+
+            <!-- Left Column / Headphones Image -->
+            <div class="left-column">
+                <img data-image="green" src="assets/img/bed.jpg">
+                <img data-image="yellow" src="assets/img/floor_poof.jpg">
+                <img data-image="red" class="active" src="assets/img/round.jpg">
+            </div>
+
+            <div class="right-column">
+                 <!-- Product Description -->
+                 <div class="product-description">
+                    <h1>Round Pillow</h1>
+                    <p>This flat bed pillow is ultra-soft, made with recycled plastic bottle fiber 
+                        fill upcycled in the U.S., and blown to custom fill specifications 
+                        used by luxury hotels and interior designers for more than 50 years.</p>
+                </div>
+
+                <div class="product-configuration">
+                    <!-- Product Color -->
+                    <div class="product-color">
+                    <h1>Color<h1>
+
+                        <div class="color-choose">
+                            <div>
+                                <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+                                <label for="red"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="yellow" type="radio" id="yellow" name="color" value="yellow">
+                                <label for="yellow"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="green" type="radio" id="green" name="color" value="green">
+                                <label for="green"><span></span></label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Product Fill -->
+                    <div class="product-fill">
+                    <h1>Fill</h1>
+                        <select>
+                            <option value="duck down">Duck Down</option>
+                            <option value="poly blend">Poly Blend</option>
+                            <option value="memory">Memory Foam</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <br>
+                <div id="add-to-cart" class="mt-2">
+                    <h1>Quantity</h1>
+                    <input type="number" placeholder="1" id="add-to-cart-qty" min="1" max="999" value="1">
+                </div>
+
+                <br>
+                <button class="add-to-cart" onclick="add_to_cart()"> Add to Cart</button>
+            </div>
+
+            <p id="demo"></p>
+
+    
+             
+            
+        </main>
+
+        <footer>
+            
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    
+    </body>
+</html>
